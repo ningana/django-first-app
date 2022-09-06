@@ -1,0 +1,14 @@
+{% extends "authentication/base.html" %}
+    {% block title %}Signup{% endblock title %}
+        {% block content %}
+            <h1>Inscrivez vous</h1>
+            {% if form.errors %}
+                {{ form.errors }}
+            {% endif %}
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Signup</button>
+                <button type="reset">Cancel</button>
+            </form>
+        {% endblock content %}

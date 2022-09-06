@@ -1,0 +1,38 @@
+{% extends "listings/templateBase.html" %}
+    {% block content %}
+        <!--<div id="block1">
+         <table>-->
+            <p>Renseignez nous sur vous</p>
+            <form action="" method="post">
+                {% comment %}
+                <tr>
+                    <td>Nom:</td>
+                    <td><input type="text" name=nom/></td>
+                </tr>
+                <tr>
+                    <td>Prenom:</td>
+                    <td><input type="text" name=prenom/></td>
+                </tr>
+                <tr>
+                    <td>Mot de passe</td>
+                    <td><input type="password" name="pass"/></td>
+                </tr>
+                <tr>
+                    <td>Address-mail:</td>
+                    <td><input type="email" name=mail></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="reset">Cancel</button>
+                        <button type="submit">Send</button>
+                    </td>
+                </tr>
+                {% comment %}
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Envoyer">
+            </form>
+                <!--</table>
+                        </div>-->
+    {% endblock %}

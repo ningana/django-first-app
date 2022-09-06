@@ -1,0 +1,64 @@
+<!-- Ceci es t un template ou gabarit de base pour toutes les pages html de mon application
+ cela nous evite le DRY (Don't Repeat Yourself) -->
+<!Doctype html>
+{% load static %}<!-- Importation du fichier css -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'listings/styles.css' %}">
+        <script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <title>{% block title %}Mon titre{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="menubar">
+            <ul>
+                <li class="active">
+                    <a href="{% url 'home' %}">
+                        <i class="fa fa-home" aria-hidden="true" style="font-size : 30px"></i>Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'band-list' %}">
+                        <i class="fa fa-bandcamp" aria-hidden="true"  style="font-size : 30px"></i>Groupes
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'listing' %}">
+                        <i class="fa fa-list" aria-hidden="true" style="font-size : 30px"></i>Listing
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'band-create' %}">
+                        <i class="fa fa-plus" aria-hidden="true" style="font-size : 30px"></i>groupe
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'create-listing' %}">
+                        <i class="fa fa-plus" aria-hidden="true" style="font-size : 30px"></i>listing
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'connexion' %}">
+                        <i class="fa fa-sign-in" aria-hidden="true" style="font-size : 30px"></i>Login
+                    </a>
+                </li>
+                <li>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">Logout</a>
+                    {% endif %}
+                </li>
+                <li class="active" style="color : #000">
+                    {% if user.is_authenticated %}
+                        {{ request.user }}
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+        {% block content %}{% endblock %}<!-- Le nom du block depend de moi, libre de le mettre ou je veux-->
+        <footer>
+
+        </footer>
+    </body>
+</html>

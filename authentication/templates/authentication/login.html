@@ -1,0 +1,20 @@
+{% extends 'authentication/base.html' %}
+{% block title %}Login{% endblock title %}
+{% block content%}
+    <div id="loginCadre">
+        <h1>Authentication</h1>
+        <div class="login">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                        <br>
+                <button type="submit">Connexion</button>
+                <button type="reset">Annuler</button>
+            </form>
+        </div>
+        <p style="text-align : center">
+            <a href="#" title="Changer de mot de passe">Mot de passe</a> oublié?<br>
+            Vous n'avez pas de compte? <a href="{% url 'signup' %}" title="Creer un nouveau compte">Creez s'en un.</a>
+        </p>
+    </div>
+{% endblock content %}

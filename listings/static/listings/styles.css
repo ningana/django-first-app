@@ -1,0 +1,205 @@
+*
+{
+   padding : 0;
+   margin : 0;
+   box-sizing : border-box;
+}
+
+body
+{
+   background-image : url("back12.jpg");
+   background-attachment : fixed;
+   color : white;
+   font-weight : bold;
+   background-size : cover;
+   font-family : sans-serif
+}
+#Conteneur
+{ /* Grand conteneur invisible ... */
+    width : 1000px;
+    heigth : 700px;
+    margin : 150px;
+    background-color : dark;
+    border-radius : 30px / 30px;
+}
+.block1{ /* En gise d'en tête pour la maquete*/
+    width : 940px;
+    height : 100px;
+    margin-left: 20px;
+	margin: 20px;
+	border-radius: 20px / 20px ; /* Arondi courbe éliptique */
+	text-align: center;
+	background-color: 	white;
+	box-shadow: 6px 6px 0px; /* Ajout d'une ombre au block */
+	/* Décalage Horizontal, Décalage Vertical, Adoucissement du dégradé, couleur */
+	text-shadow: 1px 1px 0px black;
+	word-wrap: 	break-word; /* Couper les mots très long*/
+	color : black;
+}
+.block2{ /* En gise e Menu pour la maquette */
+   width: 400px;
+	height: 400px ;
+	padding: 20px;
+	margin-left: 20px;
+	margin-top: 440;
+	border-radius: 20px / 20px;
+	text-align: center;
+	background-color: white;
+	box-shadow: 6px 6px 0px;
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color : black;
+}
+.block3{ /* En guise de corps pour la maquette */
+    width: 480px;
+	height: 440px;
+	float : right;
+	background-color: white;
+	background-image : url("Soul1.jpg");
+	box-shadow: 6px 6px 0px black;
+	border-radius: 20px / 20px;
+	margin : -440px 40px 0px 0px;
+}
+h1
+{
+    text-align : center;
+    font-weight : bold;
+    color : #CCFFFF
+}
+
+
+a:hover{
+color: #6699FF;
+}
+a:visited{
+    color: #CCFFFF;
+}
+a{
+ text-decoration : none;
+ font-weight : bold;
+}
+
+button
+{
+	color: #000;
+	font-weight: bold;
+	height: 30px;
+	border-radius: 20px / 20px;
+	box-shadow : 6px 6px 0px #FFF;
+	font-size : 20px;
+	margin-left : 20px;
+}
+.blockconnexion{
+    width : 200px;
+    height : 50px;
+    background-color : white;
+    border-radius : 30px / 30px;
+    box-shadow : 6px 6px 0px blue;
+    margin : 0px 0px 15px 400px;
+
+}
+
+
+.blockformulaire{
+    width : 350px;
+    height : 450px;
+    background-color : black;
+    border-radius : 30px / 30px;
+    padding : 30px;
+    margin : 15px 0px;
+    margin : auto;
+}
+
+
+.blockformulaire2{
+    width : 350px;
+    height : 150px;
+    background-color : black;
+    border-radius : 30px / 30px;
+    padding : 5px 20px 20px 20px;
+    margin : 15px 0px;
+    margin : auto;
+}
+
+.blockaddnewlisting
+{
+    width : 350px;
+    heigth : 250px;
+
+    background-color : black;
+    border-radius : 20px / 20px;
+    margin : auto;
+    padding : 20px;
+}
+
+.blockwelcome
+{
+    width : 750px;
+    height : 100px;
+    border-radius : 20px / 20px;
+    background-color : black;
+    margin : auto;
+}
+
+section
+{
+    width : 300px;
+    background-color : #000;
+    border-radius : 20px / 20px;
+    margin : auto;
+    padding : 20px;
+}
+
+table
+{
+ border : 1px solid white;
+}
+.menubar
+{
+    background : #CCFFFF;
+    text-align : center;
+}
+.menubar ul
+{
+    display : inline-flex;
+    list-style : none;
+}
+.menubar ul li
+{
+    width : 150px;
+    margin : 10px;
+    padding : 10px;
+}
+.menubar ul li a
+{
+ text-decoration : none;
+ color : black
+}
+.active, .menubar ul li:hover
+{
+    background : red;
+    border-radius : 5px;
+}
+.menubar .fa
+{
+    margin-right : 10px;
+}
+.login
+{
+    width : 300px;
+    border-radius : 20px / 20px;
+    background-color : #000;
+    color : #FFF;
+    padding : 20px;
+    margin : auto;
+    font-size : 25px;
+}
+#loginCadre
+{
+    width : 900px;
+    height : 400px;
+    margin-top : 150px;
+    margin-left : 200px;
+}

@@ -1,0 +1,39 @@
+{% extends "listings/templateBase.html" %}
+{% block title %}Band{% endblock title %}
+{% url 'band-detail' band.id %}
+    {% block content %}
+        <h1 style="font-size : 50px">Mes groupes préférés!!!</h1>
+        {% comment %}<p>Mes groupes préférés sont  au nombre de {{band | length}}: </p>{% endcomment %}
+        {% comment %}
+            <table>
+                <tr>
+                    <th>Nom du groupe</th>
+                    <th>Genre</th>
+                    <th>Année</th>
+                    <th>Active?</th>
+                    <th>Biographie</th>
+                    <th>Page officiel</th>
+                </tr>
+                {% for i in band %}
+                <tr>
+                    <td>{{i.name | upper}}</td>
+                    <td>{{i.genre | lower}}</td>
+                    <td>{{i.year_formed | upper}}</td>
+                    <td>{{i.active | lower}}</td>
+                    <td>{{i.biography | upper}}</td>
+                    <td style="color : none">{{i.official_homepage | lower}}</td>
+                </tr>
+                {% endfor %}
+        </table>
+        {% endcomment %}
+            <section>
+            {% for i in band %}
+            <ul style="list-style : none">
+                <li>
+                    <a href="{% url 'band-detail' i.id %}" style="font-size : 30px">{{i.name}}</a>
+                </li>
+            </ul>
+            {% endfor %}
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </section>
+    {% endblock content %}

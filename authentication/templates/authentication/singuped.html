@@ -1,0 +1,15 @@
+{% extends "authentication/base.html" %}
+    {% block title %}Signup{% endblock title %}
+        {% block content %}
+            <h1 style="text-align : center; font-size : 50px">
+                Inscription reussie, merci pour votre confiance {{ username | upper }} <br>
+                Voue recevrez bientot un mail de confirmation !!!
+            </h1>
+            <p>
+                Aller, plus de temps à perdre
+                <a href="{% url 'login' %}">
+                    Connecter vous pour decouvrir le monde des affaire avec nous
+                    <i class="fa fa-smile-o" aria-hidden="true" style="font-size : 30px"></i>
+                </a>
+            </p>
+        {% endblock content %}

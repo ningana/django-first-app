@@ -1,0 +1,16 @@
+{% extends "listings/templateBase.html}
+    {% block title %}Siege{% endblock %}
+    {% block content %}
+        <h1>Hello every body, here we will see the QG</h1>
+        <p>
+             Ceci est l'ensemble des sieges present : au nombre de {{siege | length}} :
+        </p>
+        {% for i in siege %}
+        <ul>
+            <li>{{i.name | lower}}</li>
+            <li>{{i.lieu | upper}}</li>
+            <li>{{i.Creation_Date | upper}}</li>
+            <li>{{i.genre | lower}}</li>
+            <li>{{i.nombre_scoiter | upper}}</li>
+        </ul>
+    {% endblock content %}

@@ -1,0 +1,13 @@
+{% extends "listings/templateBase.html" %} <!-- Indique à Django que nous héritions du gabarit de base-->
+    {% block content %}
+        <h1>Mes annonces de la semaine, ils sont au nombre de {{List | length}}</h1>
+            <table>
+                <ol>
+                    {% for i in List %}
+                    <tr>
+                        <td><li><a href="{% url 'listing-detail' i.id %}">{{i.title}}</a></li></td>
+                    </tr>
+                    {% endfor %}
+                </ol>
+            </table>
+    {% endblock %}

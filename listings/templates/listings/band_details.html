@@ -1,0 +1,23 @@
+{% extends "listings/templateBase.html" %}
+{% block content %}
+<h1 style="font-size : 40px">{{band.name}}</h1>
+<section style="width : 400px; padding : 10px 0px 10px 0px;">
+<ul>
+    <li>Genre : {{band.get_genre_display}}</li>
+    {% comment %}
+    le get_genre_display permet d'afiicher au lieu les valeur
+    comme HH, Rg ... Afiiche les noms correspondants
+    {% endcomment %}
+    <li>Année de formation : {{band.year_formed}}</li>
+    {% if band.active %}
+    <li>Active : Oui</li>
+    {% else %}
+    <li>Active : Non</li>
+    {% endif %}
+    {% if band.official_homepage %}
+    <li>Page officiel : <a href="{{band.official_homepage}}">{{band.official_homepage}}</a></li>
+    {% endif %}
+    <li>Biographie : {{band.biography}}</li>
+</ul>
+</section>
+{% endblock %}

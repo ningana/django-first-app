@@ -1,0 +1,11 @@
+{% extends "listings/templateBase.html" %}
+    {% block title %}Adding new groupe{% endblock title  %}
+        {% block content %}
+            <h1>Ajout d'un nouveau groupe</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Create</button>
+                <button type="reset">Cancel</button>
+            </form>
+        {% endblock content %}

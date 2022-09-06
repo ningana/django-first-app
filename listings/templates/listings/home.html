@@ -1,0 +1,10 @@
+{% extends "listings/templateBase.html" %}
+    {% block title %}Welcome{% endblock title %}
+        {% block content %}
+            <h1 style="font-size : 50px">Bonjour et bienvenue dans mon site</h1>
+            <br><br>
+            <div class="blockwelcome">
+                <h2 style="text-align : center">Aujourdhui nous sommes {{jour}}, {{date | date:"d F Y"}}</h2>
+                <h3 style="text-align : center">Et actuelement il est {{heure}}</h3>
+            </div>
+        {% endblock content %}
